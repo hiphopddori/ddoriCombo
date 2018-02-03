@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* ---------------------------------------
+Filename: multiselect.css
+Description : 
+Author	: 
+date	: 2015-03-17
+비고 : IE9,10,11,FF,CR
+--------------------------------------- */ 
+
+
+/* SelectBox + multiSelect ***********/
+.selectBox {display:inline-block; position:relative; min-width:80px; vertical-align:middle;}
+.selectBox .current {overflow:hidden; display:block; height:24px; line-height:22px; padding:0 20px 0 5px;  border:1px solid #b2b2b2; border-radius:3px; background:#fff; text-align:left;}
+.selectBox .current:hover {color:#333; cursor:pointer;}
+.selectBox .current:after {content:''; position:absolute; top:calc(50% - 2px); right:8px; border:4px solid #4c4c4c; border-bottom:0; border-left-color:transparent; border-right-color:transparent; opacity:0.8;}
+.selectBox.on {z-index:1000;}
+.selectBox.on a.current {border:1px solid #9b9b9b; color:#222;}
+.selectBox.on a.current:after {-moz-transform:rotate(180deg); -webkit-transform:rotate(180deg); -ms-transform:rotate(180deg); transform:rotate(180deg); opacity:1;}
+.selectBox.on ul {display:block;}
+.selectBox.dis {opacity:0.5;}
+.selectBox.dis .current {cursor:no-drop;}
+.selectBox.dis .current:hover {color:#797979;}
+.selectBox.dis.on {z-index:-1;}
+.selectBox ul {display:none; position:absolute; top:22px; left:0; right:0; max-height:161px; border:solid 1px #b2b2b2; border-radius:3px; background:#fff; overflow:auto; overflow-x:hidden; z-index:1000;}
+.selectBox ul li {overflow:hidden; width:100%; height:26px; line-height:24px; padding:1px 5px 0; cursor:pointer;}
+.selectBox ul li+li {border-top:dotted 1px #dadbd6;}
+.selectBox ul li a {display:block;}
+.selectBox ul li.on {font-weight:bold;}
+.selectBox ul li.over,.selectBox ul li.over a {background:#edf0f2; color:#000;}
+.selectBox ul li label {display:block;}
+.selectBox ul li label > input[type="checkbox"] {margin:0 5px 0 0;}
+.selectBox.focus {}
+.selectBox.focus a.current {border:1px solid #ffac72; color:#333;}
+.selectBox.focus a.current:after {content:''; position:absolute; top:calc(50% - 2px); right:8px; border:4px solid #fd7745; border-bottom:0; border-left-color:transparent; border-right-color:transparent; opacity:1;}
